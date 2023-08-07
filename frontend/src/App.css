@@ -1,0 +1,250 @@
+.App {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    /* filter: blur(150px); */
+}
+
+
+.box-container {
+    filter: blur(150px);
+    position: relative;
+}
+
+.color {
+    position: absolute;
+}
+
+.color:nth-child(1) {
+    bottom: 10%;
+    width: 210vh;
+    height: 100vh;
+    background: #ff359b;
+}
+
+.color:nth-child(2) {
+    top: 50%;
+    left: 10%;
+    width: 120vh;
+    height: 50vh;
+    background: #fffd87;
+}
+
+.color:nth-child(3) {
+    left: 80vh;
+    width: 120vh;
+    height: 50vh;
+    background: #00d2ff;
+}
+
+.color:nth-child(4) {
+    bottom: 25%;
+    left: 40vh;
+    width: 80vh;
+    height: 50vh;
+    background: #7eff3d;
+}
+
+.box {
+    position: absolute;
+    /* display: flex; */
+    top: 5%;
+    left: 35%;
+   
+}
+.box .square{
+    position: absolute;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    animation: animate 6s linear infinite;
+    /* animation-delay: calc(3s); */
+}
+@keyframes animate{
+    0%,100%{
+        transform: translateY(-10%);
+    }
+    50%{
+        transform: translateY(40%);
+    }
+}
+.box .square:nth-child(1){
+    top: 10%;
+    right: -65%;
+    height: 30%;
+    width: 20%;
+}
+.box .square:nth-child(2){
+    top: 50%;
+    left: -80%;
+    height: 30%;
+    width: 30%;
+}
+.box .square:nth-child(3){
+    top: 97%;
+    right: -30%;
+    height: 30%;
+    width: 10%;
+}
+.box .square:nth-child(4){
+    bottom: -40%;
+    left: -20%;
+    height: 20%;
+    width: 10%;
+}
+.box .square:nth-child(5){
+    bottom: -80%;
+    right: 50%;
+    height: 30%;
+    width: 30%;
+}
+.box .square:nth-child(6){
+    bottom: -80%;
+    right: -80%;
+    height: 10%;
+    width: 30%;
+}
+.container {
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    padding: 3%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.form h1 {
+    position: relative;
+    color: #ff7b1c;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 1.5%;
+}
+
+.form .inputBox {
+    width: 100%;
+    margin-top: 3px;
+
+}
+
+.form .inputBox input,
+.inputBox1 .react-datetime-picker {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: black;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form .inputBox input {
+    width: 90%;
+}
+
+.form .inputBox .button {
+    background: #fff;
+    color: #666;
+    min-width: 25vh;
+    min-height: 5vh;
+    cursor: pointer;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    border-radius: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.form .inputBox .button:hover{
+    background: #3dff71;
+    color: white;
+}
+
+
+
+.homepage_body {
+    position: relative;
+    margin-top: 20%;
+    width: 100%;
+    z-index: 1;
+    height: auto;
+}
+
+.reminder_card {
+    
+    display: flex;
+    flex-direction: column;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 22px;
+    margin: 2rem;
+    padding: 1rem;
+    max-width: 350px;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.reminder_card>h2 {
+    margin-bottom: 1rem;
+    color: #ff9500;
+}
+
+.reminder_card>p {
+    color: grey;
+    margin-bottom: 1rem;
+}
+
+.reminder_card>.button {
+    background: #bad5fa;
+    border: 1px solid #1877f2;
+    color: #0026ff;
+    font-size: 1.25rem;
+    width: inherit;
+    text-align: center;
+    padding: 0.5rem 0;
+    margin: 0.5rem;
+    border-radius: 22px;
+    outline: none;
+    cursor: pointer;
+}
+.reminder_card>.button:hover{
+    color: #fff;
+    background: rgb(255, 134, 134);
+    border: #ff9500;
+}
